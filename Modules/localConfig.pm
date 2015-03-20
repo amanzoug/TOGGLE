@@ -65,4 +65,8 @@ our $cutadapt = "/usr/local/cutadapt-1.2.1/bin/cutadapt";
 #Path for SNPeff
 our $snpEff="$java /home/sabotf/sources/snpEff/snpEff.jar";
 
+#Path for fastq_trimmer
+our $fastxTrimmer="/usr/local/bin/fastx_trimmer";
+
+
 1;
