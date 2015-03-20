@@ -29,7 +29,7 @@ $BWA aln
 -e=-1
 
 $BWA index
--a=is
+
 
 $BWA sampe
 
@@ -74,4 +74,7 @@ SORT_ORDER=coordinate
 VALIDATION_STRINGENCY=SILENT
 
 $picardTools markDuplicates
-VALIDATION_STRINGENCY=SILENT 
+VALIDATION_STRINGENCY=SILENT
+
+$fastx_trimmer
+-f 8
