@@ -88,13 +88,14 @@ toolbox::checkFile($refFastaFile);                                              
 ### Create the Arborescence
 toolbox::makeDir("$initialDir/0_PAIRING_FILES/");
 toolbox::makeDir("$initialDir/1_FASTQC/");
+toolbox::makeDir("$initialDir/11_FASTX/");
 toolbox::makeDir("$initialDir/2_CUTADAPT/");
 toolbox::makeDir("$initialDir/3_PAIRING_SEQUENCES/");
 toolbox::makeDir("$initialDir/4_BWA/");
 toolbox::makeDir("$initialDir/5_PICARDTOOLS/");
 toolbox::makeDir("$initialDir/6_SAMTOOLS/");
 toolbox::makeDir("$initialDir/7_GATK/");
-toolbox::makeDir("$initialDir/11_TRIMMER");
+
 
 ### Copy fastq into 0_PAIRING_FILES/    
 my $copyCom = "cp $initialDir/*.fastq $initialDir/0_PAIRING_FILES/.";                               # command to move the initial fastq files into the directory appropriate for the pipeline
