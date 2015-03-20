@@ -82,7 +82,7 @@ print LOG "#########################################\nINFOS: Paired sequences an
 toolbox::checkFile($fileConf);                                                                              # check if this file exists
 toolbox::checkFile($refFastaFile);                                                                          # check if the reference file exists
 
-
+my $softParameters = toolbox::extractHashSoft($optionref, "cutadapt");                                     # recovery of specific informations for cutadapt
 
 
 ### Create the Arborescence
@@ -199,7 +199,7 @@ my $fileAdaptator = "$toggle/adaptator.txt";     # /!\ ARGV[3] et si non reseign
 toolbox::checkFile($fileAdaptator);
 my $cutadaptSpecificFileConf = "$newDir"."/cutadapt.conf";                                                  # name for the cutadapt specific configuration file
 my $optionref = toolbox::readFileConf($fileConf);                                                           # recovery of option for cutadapt
-my $softParameters = toolbox::extractHashSoft($optionref, "cutadapt");                                         # recovery of specific informations for cutadapt
+
 ##DEBUG print LOG "DEBUG: optionref\n";
 ##DEBUG print LOG Dumper ($optionref);
 cutadapt::createConfFile($fileAdaptator, $cutadaptSpecificFileConf, $softParameters);                            # create the configuration file specific to cutadapt software
