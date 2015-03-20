@@ -182,7 +182,6 @@ $newDir = toolbox::changeDirectoryArbo($initialDir,2);                          
 my $fileAdaptator = "$toggle/adaptator.txt";     # /!\ ARGV[3] et si non reseigné ce fichier là, mais on le place où ?
 toolbox::checkFile($fileAdaptator);
 my $cutadaptSpecificFileConf = "$newDir"."/cutadapt.conf";                                                  # name for the cutadapt specific configuration file
-my $optionref = toolbox::readFileConf($fileConf);                                                           # recovery of option for cutadapt
 my $softParameters = toolbox::extractHashSoft($optionref,"cutadapt");
 ##DEBUG print LOG "DEBUG: optionref\n";
 ##DEBUG print LOG Dumper ($optionref);
